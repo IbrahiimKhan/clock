@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Clock</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="clock">
+        <div class="hour">
+            <div class="hr" id="hr"></div>
+        </div>
+        <div class="minute">
+            <div class="mn" id="mn"></div>
+        </div>
+        <div class="second">
+            <div class="sc" id="sc"></div>
+        </div>
+    </div>
+    <script type="text/javascript">
+const hr = document.querySelector("#hr")
+const mn = document.querySelector("#mn")
+const sc = document.querySelector("#sc")
+  //if you multiply hour by 30 you get angle of the circle, for example 30 * 1(hr) you get 30 degree, so you have to rotate 30 degree.. 
+    //if you have 6hr just multiply 6 by 30 and you have 180 degree , so half a circle   
+    setInterval(() => {
+    d = new Date();
+    htime = d.getHours();
+    mtime = d.getMinutes();
+    stime = d.getSeconds();
+    hrotation = 30*htime + mtime/2;
+    mrotation = 6*mtime;
+    srotation = 6*stime;
+
+    hr.style.transform = `rotate(${hrotation}deg)`;
+    mn.style.transform = `rotate(${mrotation}deg)`;
+    sc.style.transform = `rotate(${srotation}deg)`;
+}, 1000);
+    </script>
+</body>
+</html>
