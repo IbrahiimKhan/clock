@@ -53,7 +53,7 @@ const am = document.querySelector(".am")
     mn.style.transform = `rotate(${mrotation}deg)`;//per minute 6 degree ghurbe if minute e 15 then it will be 90deg ba ek somokon hobe
     sc.style.transform = `rotate(${srotation}deg)`;//per second 6 deg ghurbe if second is 30 then deg = 30*6=180 deg
     dh.textContent = ltime<10?"0"+ltime:ltime
-    dm.textContent = mtime
+    dm.textContent = mtime<10?"0"+mtime:mtime
     ds.textContent = stime
     am.textContent = amPm
     
