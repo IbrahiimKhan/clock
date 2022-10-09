@@ -121,10 +121,32 @@ border-radius: 6px 6px 15px 15px;
 }
 strong{
     background: #000000;
-    background: radial-gradient(ellipse farthest-side at center center, #000000 0%, #1CB4FF 50%, #1CB4FF 100%);
+    background: radial-gradient(ellipse farthest-side at center center, #1CB4FF 0%, #1CB4FF 50%, #1CB4FF 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     font-size: 25px;
     font-weight: bold;
     
+}
+/* Media Query for Mobile Devices */
+@media (max-width: 480px) {
+    body {
+        background-size: cover;
+    background-position: 3% 2px;
+    position: relative;
+    }
+    .clock{
+        margin-left: 0;
+        position: absolute;
+        top: 35%;
+
+    }
+    .dclock{
+        position: absolute;
+        margin-left: 0;
+        top: 0%;
+        margin-right: 50%;
+    }
+    .digital_clock{
+        margin-left: 0;    }
 }
